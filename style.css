@@ -222,8 +222,30 @@ td:nth-child(2){
     color: var(--orange_color);
 }
 
+/* media query at 992px */
+@media (max-width:992px) {
+    .recipe__bg{
+        width: 800px;
+    }
+}
+
+/* media query at 768px // */
+@media (max-width: 768px) and (max-width:992px) {
+   .recipe__bg{
+     width: 500px;
+   }
+   .img__container{
+    width: 100%;
+   } 
+   .description p {
+    width: 100%;
+   }
+   .duration{
+    width: 100%;
+   }
+}
 /* media query 375px mobile screen */
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-width: 767px) {
     .recipe__bg{
         width: 375px;
         margin: 40px auto;
