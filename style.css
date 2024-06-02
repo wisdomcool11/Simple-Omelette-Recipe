@@ -1,0 +1,254 @@
+
+:root{
+    --faded_color: #7a7a7a;
+    --fade_color_b: #636363;
+    --purple_color: #7b284f;
+    --orange_color:hsl(14,45%,36%);
+    --text_family: "Outfit", sans-serif;
+    --head_family:"Young Serif", serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+body{
+    font-size: 16px;
+    font-family:serif;
+    font-weight: 400;
+    background-color: rgb(236, 225, 215);
+}
+
+/* // recipe container //*/
+.recipe__bg{
+    background-color: hsl(330,100%,98%);
+    width: 800px;
+    margin: 100px auto;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.recipe__wrap{
+    /* container wrapping the main content of the page */
+    width: 100%; height: 100%;
+    /* border: 1px solid black; */
+}
+
+/* // styling the top image  container// */
+.img__container{
+    width: 717px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+img{
+    /* img styling */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* //intro section styling // */
+.intro__section{
+    width: 100%;
+    height: 100%;
+}
+
+.description{
+    /* wrapper holding the h1 and p tag  */
+    width: 100%;
+    height: auto;
+    padding: 33px 0px 40px 0px;
+}
+
+.description h1{
+    font-size: 41px;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.description p {
+    /* styling the p tag in description */
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #7a7a7a;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: 16px;
+    width: 695px;
+    letter-spacing: 0.02px;
+}
+
+.duration{
+    /* styling the duration */
+    width: 650px;
+    /* margin-left: 20px ; */
+    padding: 25px 25px 25px 30px;
+    background-color: rgb(255,174,201, 0.1);
+    /* giving a very light bg */
+    transition: box-shadow 0.5s ease,
+        background-color 0.5s ease;
+}
+.duration:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2),
+        0 6px 12px 0 rgba(0,0,0,0.19);
+    background-color: rgba(225,174,201,0.6);
+}
+.duration h3{
+    color: #7b284f;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    margin-bottom:10px ;
+}
+
+.duration ul{
+    margin-left: 23px;
+}
+::marker{
+    /* giving the marker color */
+    color: #7b284f;
+    font-size: 11px;
+}
+.duration li {
+    /* giving space btw marker and the text
+        and also creating a space up and down
+    */
+    padding: 6px 0 6px 20px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--faded_color);
+}
+span{
+    font-weight: bold;
+    color: #636363;
+}
+
+/* styling ingredients // */
+.ingredients{
+    margin-top: 35px;
+    width: 100%;
+    height: auto;
+    /* container */
+}
+
+.ingredients h2, 
+.instructions h2,
+.nutrition h2 {
+    /* styling all h2 */
+    font-size: 31px;
+    text-transform: capitalize;
+    color: var(--orange_color);
+}
+
+.ingredients ul {
+    margin: 20px 0 20px 15px;
+}
+.ingredients li,
+.instructions li {
+    padding: 6px 0 6px 20px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--faded_color);
+}
+
+.ingredients li::marker{
+    /* styling ingredient specific marker */
+    color: var(--orange_color);
+}
+
+.instructions li {
+    line-height: 25px;
+}
+
+/* creating a line across the page hr */
+hr{
+    color: #ddd;
+    margin: 30px 0;
+}
+
+/* // instruction styling */
+.instructions ul{
+    list-style-type:decimal;
+    padding:15px 10px 15px 25px;
+}
+
+.instructions li::marker{
+    font-size: 16px;
+    color: var(--orange_color);
+    font-weight: bold;
+}
+
+/* // nutrition styling // */
+.nutrition{
+    width: 100%;
+    height: auto;
+}
+.nutrition h2 {
+    margin-bottom: 20px;
+}
+
+/* styling blockquote */
+blockquote{
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--faded_color); 
+    padding-left:10px ;
+    margin-bottom: 20px;
+}
+
+/* //styling table // */
+table{
+    width: 100%;
+}
+td{
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+    font-weight: bold;
+}
+td:nth-child(1){
+    color: var(--faded_color);
+}
+td:nth-child(2){
+    color: var(--orange_color);
+}
+
+/* media query 375px mobile screen */
+@media (max-width: 480px) {
+    .recipe__bg{
+        width: 375px;
+        margin: 40px auto;
+        border-radius: 1px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+            0 6px 12px 0 rgba(0,0,0,0.19);
+    }
+    .img__container{
+        width: 375px;
+        height: 200px;
+        margin: -40px 0 0 -40px;
+        border-radius: 1px;
+        object-fit: contain;
+    }
+    .description h1{
+        font-size: 35px;
+    }
+    .description p {
+        width: 100%;
+    }
+    .duration{
+        width: 100%;
+        margin: auto;
+    }
+    body{
+        background-color: #fff;
+    }
+}
